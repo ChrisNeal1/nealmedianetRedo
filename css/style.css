@@ -10,3 +10,23 @@ body{
     background-attachment: fixed;
     background-size: cover;
 }
+div video{
+    display: flex;
+    -ms-flex-align: center;
+}
+.enterbutton{
+    border-color: white;
+    border-radius: 5px;
+    text-align: center;
+}
+.enterbutton button{
+    padding: 10px 25px;
+    border-radius: 30px;
+    border: none;
+    border-color: aliceblue;
+    background: linear-gradient(rgba(76, 199, 236, 0.459), rgba(8, 42, 73, 0.575));
+    color: aliceblue;
+    text-align: center;
+    font-size: 45px;
+    font-weight: 120;
+}
