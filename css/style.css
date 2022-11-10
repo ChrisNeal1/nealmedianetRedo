@@ -1,0 +1,12 @@
+*{
+    margin: 0;
+    padding: 0;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+body{
+    background-image: url(/img/bcrnd_blue.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
