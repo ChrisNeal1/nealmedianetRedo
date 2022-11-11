@@ -10,11 +10,11 @@ body{
     background-attachment: fixed;
     background-size: cover;
 }
-div video{
+/* div video{
     display: flex;
     -ms-flex-align: center;
-}
-.enterbutton{
+} */
+/* .enterbutton{
     border-color: white;
     border-radius: 5px;
     text-align: center;
@@ -27,6 +27,30 @@ div video{
     background: linear-gradient(rgba(76, 199, 236, 0.459), rgba(8, 42, 73, 0.575));
     color: aliceblue;
     text-align: center;
-    font-size: 45px;
+    /* font-size: 45px;
     font-weight: 120;
+}
+@media all and (max-width: 500px) {
+    .enterbutton button {
+        color: blue;
+    }
+} */
+.enterbutton{
+    /* vertical-align: middle;
+    text-align: center; */
+    display: flex;
+    align-items: center;
+}
+.enterbutton button{
+    margin: auto;
+    padding: 1rem;
+    text-align: center;
+    border-radius: 30px;
+    border: none;
+    border-color: aliceblue;
+    background: linear-gradient(rgba(76, 199, 236, 0.459), rgba(8, 42, 73, 0.575));
+    color: aliceblue;
+    /* display: table cell; */
+    
+    /* flex-grow: inherit; */
 }
