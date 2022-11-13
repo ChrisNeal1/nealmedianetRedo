@@ -14,7 +14,8 @@ body{
 }
 /* @media all and (max-width: 500px) {
     div video {
-        margin-top: 6vh;
+        display: flex;
+        align-self: center;
     }
 } */
 .enterbutton{
