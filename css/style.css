@@ -12,24 +12,54 @@ body{
     background-position: center;
     min-height: 100vh;
 }
-/* @media all and (max-width: 500px) {
-    div video {
-        display: flex;
-        align-self: center;
-    }
-} */
 .enterbutton{
     display: flex;
     justify-content: center;
 }
 .enterbutton button{
     margin: auto;
-    padding: 1vh;
+    padding: 1vh 1vw;
     font-size: 4vh;
+    text-shadow: 5px 3px rgb(42, 120, 184);
     text-align: center;
     border-radius: 3.5vh;
-    border: none;
-    border-color: aliceblue;
-    background: linear-gradient(rgba(76, 199, 236, 0.459), rgba(8, 42, 73, 0.575));
+    border-width: 3px;
+    /* border: none; */
+    border-color: rgba(76, 199, 248, 0.349);
+    background: linear-gradient(rgba(76, 199, 236, 0.507), rgba(8, 42, 73, 0.575));
     color: aliceblue;
+}
+.color{
+    background: linear-gradient(rgba(76, 199, 236, 0.507), rgba(8, 42, 73, 0.575));
+    width: 0%;
+    height: 0%;
+}
+.enterbutton:hover .color {
+    scale: 100%;
+
+}
+@media all and (max-width: 1000px) {
+    div video, .enterbutton {
+        margin-top: 20vh;
+    }
+    .enterbutton button {
+        margin-top: 20vh;
+        font-size: 4.5vw;
+        border-radius: 3.5vw;
+        font-weight: 600;
+    }
+}
+@media all and (min-width: 3000px) {
+    div video {
+        margin: auto;
+        width: 60%;
+        display: flex;
+        justify-content: center;
+    }
+    /* .enterbutton button {
+        margin-top: 20vh;
+        font-size: 4vw;
+        border-radius: 3.5vw;
+        font-weight: 600;
+    } */
 }
