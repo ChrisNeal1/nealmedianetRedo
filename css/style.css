@@ -10,7 +10,7 @@ body{
     background-attachment: fixed;
     background-size: cover;
     background-position: center;
-    min-height: 100vh;
+    min-height: auto;
 }
 .enterbutton{
     display: flex;
@@ -33,11 +33,11 @@ body{
 }
 .enterbutton button:hover {
     transform: scale(1.1,1.1);
-    color: rgba(0, 0, 0, 0.719);
+    color: rgba(255, 255, 255, 0.919);
     border-width: 5px;
     border-color: rgba(255, 255, 255, 0.596);
 }
-@media all and (max-width: 1000px) {
+@media all and (max-width: 850px) {
     div video, .enterbutton {
         margin-top: 20vh;
     }
@@ -48,10 +48,10 @@ body{
         font-weight: 600;
     }
 }
-@media all and (min-width: 3000px) {
+@media all and (min-width: 1400px) {
     div video {
         margin: auto;
-        width: 60%;
+        width: 70%;
         display: flex;
         justify-content: center;
     }
