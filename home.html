@@ -13,25 +13,25 @@
     <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
   </head>
   <body>
-    <div id="topbutton"></div>
-    <div class="container-fluid">
-        <nav class="row">
-            <img src="./img/NMSLogo3B.svg" alt="Neal Media Logo" class="col col-5 logo">
-        
-            <ul class="col col-6 offset-1">
-                
-                <a href="contact.html">
-                    <li>Contact</li>
-                </a>
-                <a href="about.html">
-                    <li>About</li>
-                </a>
-                <a href="home.html">
-                    <li>Home</li>
-                </a>
-            </ul>
-        </nav>
-    </div>
+    <nav id="navbar" class="navbar p-3">
+        <img src="./img/NMSLogo3B.svg" alt="Neal Media Logo" class="col col-5 logo">
+        <ul id="nav-menu" class="nav-list col col-6 offset-1">
+            <a class="nav-item" href="contact.html">
+                <li>Contact</li>
+            </a>
+            <a class="nav-item" href="about.html">
+                <li>About</li>
+            </a>
+            <a class="nav-item" href="home.html">
+                <li>Home</li>
+            </a>
+        </ul>
+        <button class="hamburger" id="hamburger-toggle" aria-label="Toggle navigation menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
+    </nav>    
     <main>
         
     </main>
@@ -60,10 +60,44 @@
             <ul>Weddings</ul>
     </aside>
     <div class="topbutton">
-        <a href="#topbutton">
+        <a href="#navbar">
             <button>Back to top</button>
         </a>
     </div>
-    
+    <script>
+        window.onscroll = function() {
+            if(window.scrollY >= 600) {
+                document.getElementsByClassName('topbutton')[0].style.visibility = "visible";
+            }else {
+                document.getElementsByClassName('topbutton')[0].style.visibility = "hidden";
+            }};
+    </script>
+    <script>
+        const hamburger = document.getElementById('hamburger-toggle');
+        const navMenu = document.getElementById('nav-menu');
+
+        hamburger.addEventListener('click', () => {
+            event.preventDefault();
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+        const navLinks = document.querySelectorAll('.nav-list');
+
+        navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            hamburger.classList.remove('active'); 
+            navMenu.classList.remove('active'); 
+        });
+        });
+        document.addEventListener('click', (event) => {
+            if (!hamburger.contains(event.target) && !navMenu.contains(event.target)) {
+                if (navMenu.classList.contains('active')) {
+                    hamburger.classList.remove('active');
+                    navMenu.classList.remove('active');
+                }
+            }
+        });
+
+    </script>
   </body>
   </html>
